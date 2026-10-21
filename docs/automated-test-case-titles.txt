@@ -1,0 +1,310 @@
+Account (16 tests)
+
+1. Verify the desktop Account link targets the account route
+2. Verify the desktop Account link opens Shopify sign-in
+3. Verify Account supports keyboard navigation to sign-in
+4. Verify direct account navigation redirects to email-based sign-in
+5. Verify the email field has a label and required email configuration
+6. Verify an empty email violates required-field constraints
+7. Verify malformed email invalid-email violates email constraints
+8. Verify malformed email qa@ violates email constraints
+9. Verify whitespace-only input is treated as an empty email
+10. Verify a syntactically valid email passes constraints without requesting a code
+11. Verify correcting an invalid email clears its type mismatch
+12. Verify marketing consent can be toggled without submitting sign-in
+13. Verify terms and privacy controls are available on sign-in
+14. Verify the store identity link returns to the storefront
+15. Verify the mobile Account link opens sign-in
+16. Verify mobile sign-in exposes email and Continue controls
+
+Shopping Bag / Cart (16 tests)
+
+17. Verify an empty cart displays recovery without checkout
+18. Verify Continue shopping opens the all-products collection
+19. Verify Product Details adds the selected variant to the cart
+20. Verify Quick View adds its selected variant to the cart
+21. Verify cart displays the correct item, loaded image, quantity and total
+22. Verify increasing quantity updates the item and cart total
+23. Verify decreasing quantity updates the item and cart total
+24. Verify removing the final item restores the empty cart
+25. Verify reloading preserves cart items and quantity
+26. Verify adding the same variant again merges its quantity into one line
+27. Verify different variants remain separate cart lines
+28. Verify the cart product link opens the matching variant
+29. Verify decreasing quantity is disabled at the minimum of one
+30. Verify quantity -1 violates the quantity input constraints
+31. Verify quantity 1.5 violates the quantity input constraints
+32. Verify mobile cart quantity and removal controls work
+
+Checkout (27 tests)
+
+33. Verify Check out opens the single-page checkout with the selected product
+34. Verify Contact, Delivery, Shipping and Payment sections are displayed
+35. Verify the order summary contains the cart product and selected variant
+36. Verify checkout subtotal matches the session cart item total
+37. Verify shipping asks for an address before offering delivery rates
+38. Verify delivery fields have accessible labels
+39. Verify the configured delivery country includes the United Kingdom
+40. Verify marketing consent can be toggled locally without placing an order
+41. Verify checkout exposes Refund policy
+42. Verify checkout exposes Shipping
+43. Verify checkout exposes Privacy policy
+44. Verify checkout exposes Terms of service
+45. Verify the final Pay now control is present without activating it
+46. Verify the store is ready to accept payment
+47. Verify synthetic delivery details can be entered without submitting an order
+48. Verify the optional phone field is not required
+49. Verify an empty email violates its required input constraint
+50. Verify an empty lastName violates its required input constraint
+51. Verify an empty address violates its required input constraint
+52. Verify an empty city violates its required input constraint
+53. Verify an empty postcode violates its required input constraint
+54. Verify email invalid-email violates email format constraints
+55. Verify email qa@ violates email format constraints
+56. Verify a syntactically valid email passes input constraints without ordering
+57. Verify correcting an invalid email clears its type mismatch
+58. Verify mobile checkout displays contact, delivery and final payment sections
+59. Verify the mobile order summary expands with the selected product
+
+Collections / Product Listing (29 tests)
+
+60. Verify a directory collection opens its matching listing
+61. Verify product cards display titles, loaded images and current prices
+62. Verify selecting a product through its title opens the matching product
+63. Verify selecting a product through its image opens the matching product
+64. Verify price-ascending orders displayed current prices correctly
+65. Verify price-descending orders displayed current prices correctly
+66. Verify title-ascending orders displayed product titles correctly
+67. Verify title-descending orders displayed product titles correctly
+68. Verify choosing 9 products per page displays the expected number
+69. Verify choosing 12 products per page displays the expected number
+70. Verify choosing 16 products per page displays the expected number
+71. Verify next page shows different products and Previous restores the first page
+72. Verify a supported Availability filter applies and Clear restores the collection
+73. Verify a supported Metal filter applies and Clear restores the collection
+74. Verify a supported Style filter applies and Clear restores the collection
+75. Verify a supported Stone filter applies and Clear restores the collection
+76. Verify the Under 30 quick filter excludes higher-priced products
+77. Verify combined price and availability filters persist when sorting
+78. Verify a zero-price filter shows no products and Clear recovers the listing
+79. Verify zero-count filter options cannot be selected
+80. Verify unsupported page size 0 falls back to nine products
+81. Verify unsupported page size -1 falls back to nine products
+82. Verify unsupported page size 999 falls back to nine products
+83. Verify unsupported page size invalid falls back to nine products
+84. Verify a negative page number displays the first page with Previous disabled
+85. Verify a page beyond the last page displays the final products with Next disabled
+86. Verify mobile filters open and Escape dismisses them with focus restored
+87. Verify mobile price sorting orders products correctly
+88. Verify applying a zero maximum price on mobile shows the empty state
+
+Contact Us (16 tests)
+
+89. Verify contact fields have accessible labels and required controls
+90. Verify contact channels use email and telephone links
+91. Verify the FAQ link opens care and questions
+92. Verify submitting an empty form focuses the required name field
+93. Verify a missing name blocks inquiry submission
+94. Verify a missing email blocks inquiry submission
+95. Verify a missing message blocks inquiry submission
+96. Verify invalid email not-an-email blocks inquiry submission
+97. Verify invalid email qa@ blocks inquiry submission
+98. Verify valid required fields pass browser validation with no order number
+99. Verify inquiry topic selection: Order & Delivery
+100. Verify inquiry topic selection: Sizing & Styling Advice
+101. Verify inquiry topic selection: Returns & Exchanges
+102. Verify inquiry topic selection: Custom Order / Gifting
+103. Verify inquiry topic selection: General Question
+104. Verify mobile contact fields retain entered values and validation
+
+Care, FAQs and Policies (17 tests)
+
+105. Verify /pages/our-story displays the story and its key sections
+106. Verify /pages/our-story-1 displays the story and its key sections
+107. Verify Terms of service loads with readable policy content
+108. Verify Shipping policy loads with readable policy content
+109. Verify Privacy policy loads with readable policy content
+110. Verify Refund policy loads with readable policy content
+111. Verify the Daily care card displays guidance
+112. Verify the Storage care card displays guidance
+113. Verify the Water care card displays guidance
+114. Verify FAQ opens and closes: Will these tarnish?
+115. Verify FAQ has a published answer rather than placeholder text: Will these tarnish?
+116. Verify FAQ opens and closes: Are they safe for sensitive ears?
+117. Verify FAQ has a published answer rather than placeholder text: Are they safe for sensitive ears?
+118. Verify FAQ opens and closes: How long does international delivery take?
+119. Verify FAQ has a published answer rather than placeholder text: How long does international delivery take?
+120. Verify FAQ supports keyboard expansion and collapse
+121. Verify mobile FAQ expands its answer
+
+Ear Stack Planner (20 tests)
+
+122. Verify opening the planner displays the piercing selection step
+123. Verify closing the planner restores focus to its trigger
+124. Verify Escape closes the planner and restores focus
+125. Verify the planner can be opened with Enter
+126. Verify choosing 1 piercings displays the correct positions
+127. Verify choosing 2 piercings displays the correct positions
+128. Verify choosing 3 piercings displays the correct positions
+129. Verify selecting a piece fills its position and updates the total
+130. Verify two selected pieces produce the sum of their prices
+131. Verify replacing a piece changes its position without increasing the count
+132. Verify removing a piece updates the remaining total
+133. Verify reducing positions removes pieces from excluded positions
+134. Verify a starter preset fills its advertised number of positions
+135. Verify a locally saved stack is restored after reload
+136. Verify a position can be selected with the keyboard
+137. Verify an empty stack disables Save, Share and Add
+138. Verify removing the last piece disables stack actions again
+139. Verify a malformed shared stack does not break planner selection
+140. Verify mobile selection and removal update the stack
+141. Verify the mobile planner closes with its Close control
+
+Home / Navigation (20 tests)
+
+142. Verify the home page displays the brand and main navigation
+143. Verify the Shop Earrings hero link opens the correct collection
+144. Verify the Shop New In hero link opens the correct collection
+145. Verify the Earrings header link opens the correct page
+146. Verify the Collections header link opens the correct page
+147. Verify the New in header link opens the correct page
+148. Verify the Our Story header link opens the correct page
+149. Verify the Contact Us header link opens the correct page
+150. Verify the desktop Earrings menu opens and closes with Escape
+151. Verify the Earrings menu opens the Huggies collection
+152. Verify the Earrings menu opens the Studs collection
+153. Verify the Earrings menu opens the Rings collection
+154. Verify the logo returns to the home page from a collection
+155. Verify the Terms of Service footer link opens the correct page
+156. Verify the Shipping Policy footer link opens the correct page
+157. Verify the Privacy Policy footer link opens the correct page
+158. Verify the Refund Policy footer link opens the correct page
+159. Verify the FAQ footer link opens the correct page
+160. Verify the mobile menu opens and closes on the home page
+161. Verify the mobile Collections link opens the collection directory
+
+Newsletter (20 tests)
+
+162. Verify the signup displays a required email input and submit control
+163. Verify the email input has a meaningful accessible name
+164. Verify an empty email blocks subscription and focuses the input
+165. Verify malformed email not-an-email blocks subscription
+166. Verify malformed email qa@ blocks subscription
+167. Verify whitespace-only email cannot be subscribed
+168. Verify a syntactically valid email passes browser validation without submission
+169. Verify editing one signup leaves the other email field unchanged
+170. Verify Enter on an empty email blocks subscription
+171. Verify the signup displays a required email input and submit control
+172. Verify the email input has a meaningful accessible name
+173. Verify an empty email blocks subscription and focuses the input
+174. Verify malformed email not-an-email blocks subscription
+175. Verify malformed email qa@ blocks subscription
+176. Verify whitespace-only email cannot be subscribed
+177. Verify a syntactically valid email passes browser validation without submission
+178. Verify editing one signup leaves the other email field unchanged
+179. Verify Enter on an empty email blocks subscription
+180. Verify mobile main signup displays and rejects an invalid email
+181. Verify mobile footer signup displays and rejects an invalid email
+
+Product Details (26 tests)
+
+182. Verify the product heading and breadcrumb identify the current product
+183. Verify price and SKU match the selected variant
+184. Verify sale pricing displays a higher comparison price only when discounted
+185. Verify the main product image loads with descriptive alternative text
+186. Verify a gallery thumbnail displays its matching media
+187. Verify the first gallery image can be restored after changing media
+188. Verify gallery thumbnails support keyboard activation
+189. Verify selecting another variant updates options, URL, SKU and price
+190. Verify variant selection survives a page reload
+191. Verify available variants enable purchase controls and show in-stock status
+192. Verify the product form uses a fixed quantity of one
+193. Verify sticky product details agree with the selected variant
+194. Verify the DESCRIPTION panel opens and closes
+195. Verify the MATERIALS & DIMENSIONS panel opens and closes
+196. Verify the JEWELLERY CARE panel opens and closes
+197. Verify the SHIPPING & RETURNS panel opens and closes
+198. Verify information panels support keyboard opening and closing
+199. Verify an unknown product returns a not-found page without purchase controls
+200. Verify invalid variant 0 falls back to a valid product variant
+201. Verify invalid variant not-a-variant falls back to a valid product variant
+202. Verify a sold-out variant disables both purchase actions
+203. Verify repeated option selection keeps one selection per option group
+204. Verify product information and purchase controls are visible without horizontal page overflow
+205. Verify mobile variant selection updates the selected product
+206. Verify mobile gallery selection changes the active image
+207. Verify mobile care information expands and collapses
+
+Quick View (18 tests)
+
+208. Verify Quick View opens the selected product without leaving its collection
+209. Verify the product image loads with descriptive alternative text
+210. Verify product price, SKU and description match product data
+211. Verify changing options selects the correct variant and price
+212. Verify an available variant enables Add to Bag
+213. Verify Full Details opens the matching product page
+214. Verify Close dismisses Quick View and returns focus to its trigger
+215. Verify Escape dismisses Quick View and returns focus to its trigger
+216. Verify the backdrop dismisses Quick View
+217. Verify opening and closing Quick View locks and restores page scrolling
+218. Verify Quick View can be opened using the keyboard
+219. Verify Tab and Shift Tab stay within Quick View
+220. Verify a failed product load shows an error and disables purchase
+221. Verify Retry recovers after a simulated product load failure
+222. Verify Quick View can be closed after a product load failure
+223. Verify a sold-out variant disables Add to Bag
+224. Verify mobile Quick View displays the selected product and closes
+225. Verify mobile Full Details opens the matching product
+
+Saved Items (9 tests)
+
+226. Verify a new anonymous session shows zero saved items
+227. Verify the collection Save button starts unselected for guests
+228. Verify refreshing does not invent saved items in a new guest session
+229. Verify Saved in the header opens authentication
+230. Verify Saved supports keyboard activation
+231. Verify a guest cannot save a collection product without authentication
+232. Verify a guest cannot save a product from Product Details without authentication
+233. Verify the mobile menu shows zero saved items and opens authentication
+234. Verify mobile collection Save requires authentication
+
+Search (18 tests)
+
+235. Verify the header search opens with a search input
+236. Verify opening search focuses the search input
+237. Verify opening search displays default products
+238. Verify the close button dismisses search
+239. Verify Escape dismisses search and returns focus to its trigger
+240. Verify a product keyword returns relevant search results
+241. Verify an unmatched query displays the no-results state
+242. Verify Clear search restores the default products after no results
+243. Verify removing a query restores the default search state
+244. Verify a whitespace-only query resets to an empty input
+245. Verify the Pearl suggestion applies its search query
+246. Verify the Huggies suggestion applies its search query
+247. Verify the Gold suggestion applies its search query
+248. Verify the Drops suggestion applies its search query
+249. Verify the Climbers suggestion applies its search query
+250. Verify selecting a search result opens the matching product
+251. Verify mobile search opens and closes
+252. Verify a mobile search displays relevant product results
+
+Virtual Try-On (17 tests)
+
+253. Verify Try-On opens with a photo fallback when the camera API is unavailable
+254. Verify Close dismisses Try-On and restores focus
+255. Verify Escape dismisses Try-On and restores focus
+256. Verify Try-On supports keyboard opening
+257. Verify editing and download controls are hidden before a photo is loaded
+258. Verify a valid photo displays the preview, product overlay and editing controls
+259. Verify increasing Size changes the overlay scale
+260. Verify changing Angle rotates the overlay
+261. Verify Reset restores default size and angle
+262. Verify dragging the product changes its placement
+263. Verify Save Image downloads a nonempty PNG preview
+264. Verify reopening Try-On clears the previous preview
+265. Verify a non-image file displays validation feedback
+266. Verify corrupt image bytes display a load error
+267. Verify selecting a valid image recovers after a corrupt image
+268. Verify mobile photo selection provides editing controls
+269. Verify the mobile Close control dismisses the photo preview

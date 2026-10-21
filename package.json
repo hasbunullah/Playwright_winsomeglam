@@ -1,0 +1,20 @@
+{
+  "name": "ecommerce-playwright-pom",
+  "version": "1.0.0",
+  "private": true,
+  "description": "JavaScript Playwright framework using the Page Object Model",
+  "type": "module",
+  "scripts": {
+    "test": "node scripts/run-tests.js",
+    "test:headed": "node scripts/run-tests.js --headed",
+    "test:ui": "playwright test --ui",
+    "test:list": "playwright test --list",
+    "report": "allure open allure-report --host 127.0.0.1",
+    "report:playwright": "playwright show-report"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.58.0",
+    "allure": "^3.21.0",
+    "allure-playwright": "^3.13.0"
+  }
+}
